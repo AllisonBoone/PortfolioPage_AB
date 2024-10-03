@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Allison Boone's Portfolio showcasing full-stack development skills, projects, and contact information."
+    />
+    <meta
+      name="keywords"
+      content="Full-Stack Developer, Portfolio, HTML, CSS, JavaScript, React, Node.js"
+    />
+    <title>Portfolio Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../Images/favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../Styles/styles.css" />
+
+    <!-- This is where the media links come from -->
+    <script
+      src="https://kit.fontawesome.com/9f7b7c082d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="my-navbar">
+        <a href="#about-me" class="skip-nav">Skip to content</a>
+        <a href="#about-me">About Me</a>
+        <a href="#my-projects">Projects</a>
+        <a href="#contact-me">Contact</a>
+        <a
+          href="resume.html"
+          id="resume"
+          target="_blank"
+          aria-label="Resume page"
+          >Resume</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="intro-title">
+          <h1>Hi, I'm Allison.</h1>
+          <h2>Welcome to my portfolio page.</h2>
+        </div>
+      </section>
+
+      <section id="about-me">
+        <h2>About Me</h2>
+
+        <p class="paragraph-space">
+          I am an aspiring full-stack developer currently pursuing a Diploma in
+          Software Development at Keyin College. With hands-on experience in
+          building web applications using modern technologies such as
+          JavaScript, React, and Git, I am passionate about creating innovative,
+          efficient solutions to complex problems. My background in customer
+          service and personal care has sharpened my communication, teamwork,
+          and problem-solving skills, making me adept at working in
+          collaborative environments.
+        </p>
+
+        <p>
+          Driven by a desire to continuously learn and improve, I am expanding
+          my expertise in backend technologies like Node.js and databases such
+          as MongoDB. I thrive in fast-paced, dynamic settings and enjoy
+          applying both my technical and interpersonal skills to deliver
+          high-quality, user-friendly experiences. I'm excited to contribute to
+          a professional, agile development team and further develop my career
+          in software development.
+        </p>
+      </section>
+
+      <section id="my-skills">
+        <div class="my-skills-title">
+          <h2>My Skills and Tools</h2>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="../Images/html-5.svg" alt="HTML logo" loading="lazy" />
+          </div>
+          <div class="grid-item">
+            <img src="../Images/css.svg" alt="CSS logo" loading="lazy" />
+          </div>
+          <div class="grid-item">
+            <img
+              src="../Images/bootstrap.svg"
+              alt="Bootstrap logo"
+              loading="lazy"
+            />
+          </div>
+          <div class="grid-item">
+            <img src="../Images/figma.svg" alt="Figma logo" loading="lazy" />
+          </div>
+          <div class="grid-item">
+            <img
+              src="../Images/javascript.svg"
+              alt="JavaScript logo"
+              loading="lazy"
+            />
+          </div>
+          <div class="grid-item">
+            <img src="../Images/react.svg" alt="React logo" loading="lazy" />
+          </div>
+          <div class="grid-item">
+            <img src="../Images/nodejs.svg" alt="NodeJS logo" loading="lazy" />
+          </div>
+          <div class="grid-item">
+            <img src="../Images/python.svg" alt="Python logo" loading="lazy" />
+          </div>
+          <div class="grid-item">
+            <img src="../Images/java.svg" alt="Java logo" loading="lazy" />
+          </div>
+          <div class="grid-item">
+            <img src="../Images/vscode.svg" alt="VSCode logo" loading="lazy" />
+          </div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+          <div class="grid-item">Loading...</div>
+        </div>
+      </section>
+
+      <section id="my-projects">
+        <h2>My Projects</h2>
+
+        <div class="past-projects">
+          <h3>Etch-a-Sketch</h3>
+          <div class="projects-logos">
+            <img src="../Images/html-5.svg" alt="HTML Logo" />
+            <img src="../Images/css.svg" alt="CSS Logo" />
+            <img src="../Images/javascript.svg" alt="JavaScript Logo" />
+          </div>
+
+          <p>
+            This Project is an interactive etch-a-sketch game using HTML, CSS
+            and JavaScript. The user can use the arrow keys on their keyboard to
+            control where they would like to draw and click the shake button for
+            a clean canvas.
+          </p>
+          <img src="../Images/Etch-a-Sketch.webp" alt="Etch-a-Sketch Project" />
+
+          <div class="past-projects-buttons">
+            <a href="./etch.html" class="button" target="_blank"> Demo</a>
+            <a
+              href="https://github.com/AllisonBoone/PortfolioPage_AB/tree/main/New%20Portfolio%20Project/Etch-a-sketch"
+              class="button"
+              target="_blank"
+            >
+              Project Code</a
+            >
+          </div>
+        </div>
+
+        <!-- <div class="dragon-game">
+          <p>
+            This Project is a RPG, dragon slaying game using HTML, CSS and
+            JavaScript. The user can click the buttons to make decisions that
+            can lead them to defeating the dragon and winning or losing against
+            the dragon and starting over.
+          </p>
+
+          <a href="#" class="button"> Dragon RPG</a>
+        </div> -->
+      </section>
+
+      <section id="contact-me">
+        <h2>Contact Me</h2>
+
+        <hr />
+
+        <div id="contact-info">
+          <a
+            href="mailto:AllisonBoone1999@gmail.com"
+            target="_blank"
+            title="Email"
+            aria-label="Send an email to Allison Boone"
+          >
+            <i class="fa-regular fa-envelope fa-2xl"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/allisonboone1999/"
+            target="_blank"
+            title="LinkedIn"
+            aria-label="Connect on LinkedIn with Allison Boone"
+          >
+            <i class="fa-brands fa-linkedin fa-2xl"></i>
+          </a>
+
+          <a
+            href="https://github.com/AllisonBoone"
+            target="_blank"
+            title="GitHub"
+            aria-label="See other projects Allison Boone has worked on"
+          >
+            <i class="fa-brands fa-square-github fa-2xl"></i>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer-content">
+        <p>2024 © Allison Boone</p>
+      </footer>
+    </main>
+    <a href="#" class="back-to-top" aria-label="Back to Top"
+      ><i class="fa-solid fa-angle-up"></i> Back to Top</a
+    >
+    <script src="../Scripts/index.js"></script>
+  </body>
+</html>

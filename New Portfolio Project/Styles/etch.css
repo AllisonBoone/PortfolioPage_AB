@@ -1,0 +1,265 @@
+/* Universal reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Text adjustments and accessibility */
+html {
+  font-size: 100%; /* Respects user font size preferences */
+  -webkit-text-size-adjust: 100%; /* Adjusts text size for different screen sizes (Safari) */
+  -ms-text-size-adjust: 100%; /* Adjusts text size for different screen sizes (IE) */
+  -webkit-font-smoothing: antialiased; /* Improves text rendering in WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Improves text rendering in macOS */
+}
+
+/* Smooth scrolling when focused */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%; /* Ensures full height layout */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+/* Better readability with default line spacing */
+body {
+  line-height: 1.5;
+  color: #333; /* Ensures readable text color */
+  background-color: #fff; /* Light background for better contrast */
+  font-size: clamp(
+    16px,
+    2vw,
+    20px
+  ); /* Font size scales with viewport, min 16px, max 20px */
+}
+
+/* Responsive media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%; /* Ensures media does not exceed its container */
+}
+
+/* Responsive iframes */
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form elements inherit font settings for consistency */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer; /* Ensures buttons have the correct cursor */
+}
+
+/* Remove default appearance for form elements in mobile browsers */
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Prevent focus on disabled elements */
+:disabled {
+  pointer-events: none;
+  opacity: 0.5; /* Optional styling to make it more obvious */
+}
+
+/* Removes default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Prevents text overflow in headings and paragraphs */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Allows underlines to skip overlapping characters */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Ensures focus outlines remain visible for accessibility */
+:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid blue; /* Focus state for keyboard users */
+  outline-offset: 2px;
+}
+
+/* Cursor settings for interactive elements */
+a,
+button,
+input,
+textarea,
+select {
+  cursor: pointer;
+}
+
+/* Table reset for consistency */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* Vertical alignment for inline elements like buttons and images */
+img,
+button,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+
+/* Clearfix utility for handling floated elements */
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Reduces motion for users who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* NEW STYLES BEGIN */
+
+/* Main styles */
+body {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-image: url('../Images/etch-background.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/** Canvas styles */
+.canvasWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  border: 30px solid #e80000;
+  border-width: 30px 30px 70px 30px; /* Extra space for knobs */
+  border-radius: 10px;
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* canvas and knob shake */
+.left-knob.shake,
+.right-knob.shake,
+canvas.shake {
+  animation: shake 0.5s linear 1;
+}
+
+/* Knob styles */
+.left-knob,
+.right-knob {
+  position: absolute;
+  bottom: 118px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.left-knob {
+  left: 40px; /* Position the left knob */
+}
+
+.right-knob {
+  right: 40px; /* Position the right knob */
+}
+
+/* Button styling */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 20px 0px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  font-family: Helvetica, sans-serif;
+  transition: transform 0.3s ease; /* Hover transitions */
+}
+
+.buttons:hover {
+  transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* Shake animation */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
