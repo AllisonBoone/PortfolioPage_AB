@@ -1,7 +1,5 @@
 'use strict';
 
-// JavaScript for Main Page!!
-
 // Function to show the button when scrolling down
 window.onscroll = function () {
   const button = document.querySelector('.back-to-top');
@@ -27,5 +25,3 @@ window.onload = function () {
     window.scrollTo(0, 0);
   }, 0);
 };
-
-// JavaScript for Etch-a-Sketch game!!

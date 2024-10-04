@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Etch-a-Sketch Game</title>
+
     <link rel="stylesheet" href="../Styles/etch.css" />
     <link rel="stylesheet" href="../Styles/reset.css" />
   </head>
 
   <body>
     <div class="canvasWrap">
-      <canvas width="1600" height="1000" id="etch-a-sketch"></canvas>
+      <canvas
+        width="1600"
+        height="1000"
+        id="etch-a-sketch"
+        aria-label="Etch-a-Sketch drawing canvas"
+      ></canvas>
       <div class="left-knob"></div>
       <div class="right-knob"></div>
       <div class="buttons">
-        <button class="shake">Shake!</button>
+        <button class="shake" aria-label="Shake the Etch-a-Sketch">
+          Shake!
+        </button>
       </div>
     </div>
 
