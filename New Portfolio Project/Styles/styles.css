@@ -220,6 +220,61 @@ a.button:hover {
   border: 2px solid #4682b4; /* Add blue border */
 }
 
+/* Styling for the Etch-a-Sketch project container */
+.past-projects {
+  display: flex;
+  flex-direction: column; /* Align elements vertically */
+  align-items: flex-start; /* Center-align content */
+  justify-content: center; /* Center-align content */
+  padding: 30px; /* Add some padding */
+  background-color: #f7f9fc; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.projects-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30px;
+  height: auto;
+  margin: 10px 0px;
+}
+
+/* Styling the paragraph in the project section */
+.past-projects p {
+  text-align: justify; /* Justify text */
+  margin-bottom: 20px; /* Space between paragraph and other elements */
+}
+
+/* Styling for the video in the project section */
+.past-projects video {
+  max-width: 100%; /* Ensure video is responsive */
+  height: auto; /* Maintain video aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 20px; /* Space between video and buttons */
+}
+
+/* Styling the buttons in the project section */
+.past-projects .button {
+  display: inline-block; /* Make the button behave like a block */
+  padding: 10px 20px; /* Padding inside the button */
+  margin: 10px; /* Space between buttons */
+  background-color: #4682b4; /* Blue background */
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid transparent; /* No border initially */
+  transition: background-color 0.3s ease, border 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for buttons */
+.past-projects .button:hover {
+  background-color: #5a9bd5; /* Lighter blue background on hover */
+  border: 2px solid #4682b4; /* Add a border on hover */
+}
+
 /* Styling for the Contact Me section */
 #contact-me {
   display: flex; /* Flexbox layout */
@@ -306,6 +361,7 @@ a.button:hover {
 
 /* Media query for responsive layout on screens 768px and smaller */
 @media (max-width: 768px) {
+  /* Navbar styling */
   .my-navbar {
     flex-direction: column; /* Stack navbar items */
     align-items: center; /* Center the items */
@@ -328,67 +384,8 @@ a.button:hover {
       minmax(100px, 1fr)
     ); /* Responsive grid */
   }
-}
 
-/* WORK IN PROGRESS!!! */
-
-/* Styling for the Etch-a-Sketch project container */
-.past-projects {
-  display: flex;
-  flex-direction: column; /* Align elements vertically */
-  align-items: flex-start; /* Center-align content */
-  justify-content: center; /* Center-align content */
-  padding: 30px; /* Add some padding */
-  background-color: #f7f9fc; /* Light background for contrast */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.projects-logos {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 30px;
-  height: auto;
-  margin: 10px 0px;
-}
-
-/* Styling the paragraph in the project section */
-.past-projects p {
-  text-align: justify; /* Justify text */
-  margin-bottom: 20px; /* Space between paragraph and other elements */
-}
-
-/* Styling for the video in the project section */
-.past-projects video {
-  max-width: 100%; /* Ensure video is responsive */
-  height: auto; /* Maintain video aspect ratio */
-  border-radius: 8px; /* Rounded corners */
-  margin-bottom: 20px; /* Space between video and buttons */
-}
-
-/* Styling the buttons in the project section */
-.past-projects .button {
-  display: inline-block; /* Make the button behave like a block */
-  padding: 10px 20px; /* Padding inside the button */
-  margin: 10px; /* Space between buttons */
-  background-color: #4682b4; /* Blue background */
-  color: white; /* White text */
-  text-decoration: none; /* Remove underline from link */
-  border-radius: 5px; /* Rounded corners */
-  border: 2px solid transparent; /* No border initially */
-  transition: background-color 0.3s ease, border 0.3s ease; /* Smooth hover transition */
-}
-
-/* Hover effect for buttons */
-.past-projects .button:hover {
-  background-color: #5a9bd5; /* Lighter blue background on hover */
-  border: 2px solid #4682b4; /* Add a border on hover */
-}
-
-/* Media query for smaller screens (responsive design) */
-@media (max-width: 768px) {
+  /* Adjustments for past projects on smaller screens */
   .past-projects {
     padding: 20px; /* Adjust padding for smaller screens */
     margin: 20px 0; /* Adjust margin for smaller screens */
