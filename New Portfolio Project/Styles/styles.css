@@ -146,9 +146,11 @@ html {
   background-color: #fff; /* Blue background */
   color: #000000; /* White text */
   display: flex; /* Flexbox to center content */
+  flex-direction: column;
   justify-content: center; /* Horizontally center */
   align-items: center; /* Vertically center */
   height: 100px; /* Fixed height */
+  padding: 10px;
   border-radius: 8px; /* Rounded corners */
   transition: transform 0.3s ease; /* Hover transitions */
 }
@@ -160,9 +162,20 @@ html {
 
 /* Ensure images fit within the grid items */
 .grid-item img {
-  max-width: 80%; /* Ensure the image does not exceed the grid item width */
-  max-height: 80%; /* Ensure the image does not exceed the grid item height */
+  max-width: 60%; /* Ensure the image does not exceed the grid item width */
+  max-height: 60%; /* Ensure the image does not exceed the grid item height */
   object-fit: contain; /* Cover the entire grid item without distortion */
+  margin-top: 10px;
+  margin-bottom: auto;
+}
+
+.grid-item p {
+  margin-top: 5px; /* Add space between image and text */
+  font-weight: bold;
+}
+
+.node {
+  margin: -6px;
 }
 
 /* Styling for the My Projects section */
