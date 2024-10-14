@@ -166,8 +166,21 @@ body {
   background-color: #add8e6;
 }
 
+h1 {
+  font-family: Nunito, Roboto, sans-serif;
+}
+
+p {
+  font-family: Poppins, 'Open Sans', 'Helvetica Neue';
+}
+
+form {
+  font-family: Poppins, 'Open Sans', 'Helvetica Neue';
+}
+
 input {
   border: 1px solid #000;
+  padding: 2px;
 }
 
 button {
