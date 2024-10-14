@@ -379,6 +379,7 @@ html {
   width: 30px;
   height: auto;
   margin: 10px 0px;
+  gap: 5px;
 }
 
 /* General button styling */
