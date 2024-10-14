@@ -5,7 +5,6 @@ const app = express();
 const port = 3000;
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'));
 
 app.use(express.static('public'));
 
@@ -19,7 +18,7 @@ app.get('/weather', async (req, res) => {
     const response = await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`
     );
-    const weatherDate = response.data;
+    const weatherData = response.data;
     res.render('weather', { weather: weatherData });
   } catch (error) {
     console.log(error);
