@@ -160,3 +160,30 @@ textarea {
     scroll-behavior: auto !important;
   }
 }
+
+body {
+  height: 100vh;
+  background-color: #add8e6;
+}
+
+input {
+  border: 1px solid #000;
+}
+
+button {
+  margin-left: 10px;
+  background-color: #98fb98;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.container {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 10%;
+  border-radius: 15px;
+}
