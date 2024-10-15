@@ -8,7 +8,6 @@ yarn-error.log*
 
 # Environment variables
 .env
-OPENWEATHER_API_KEY=294cdb6d15471fc0b6736219e9d5d55c
 
 # Build output
 dist/
