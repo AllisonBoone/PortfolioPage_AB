@@ -161,21 +161,31 @@ textarea {
   }
 }
 
+/* PAGE SPECIFIC STYLES */
+
 body {
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #add8e6;
+  margin: 0;
 }
 
 h1 {
   font-family: Nunito, Roboto, sans-serif;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
 }
 
-p {
+p,
+form {
   font-family: Poppins, 'Open Sans', 'Helvetica Neue';
 }
 
 form {
-  font-family: Poppins, 'Open Sans', 'Helvetica Neue';
+  margin-bottom: 10px;
 }
 
 input {
@@ -188,15 +198,47 @@ button {
   background-color: #98fb98;
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .container {
-  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  margin: 10%;
+  padding: 20px;
   border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 50%;
+  width: 75%;
+}
+
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+  width: 75%;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.forecast-item,
+.weather-item,
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 15px;
+  width: 100%;
+  margin-bottom: 20px;
 }
