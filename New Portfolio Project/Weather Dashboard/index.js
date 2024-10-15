@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/weather', async (req, res) => {
-  const city = req.query.city || "St. John's";
+  const city = req.query.city;
   const apiKey = process.env.OPENWEATHER_API_KEY;
   try {
     const response = await axios.get(
@@ -28,6 +28,26 @@ app.get('/weather', async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).send('Error retrieving weather data');
+  }
+});
+
+app.get('/forecast', async (req, res) => {
+  const city = req.query.city;
+  const apiKey = process.env.OPENWEATHER_API_KEY;
+  try {
+    const forecastResponse = await axios.get(
+      `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(
+        city
+      )}&appid=${apiKey}`
+    );
+    const forecastData = forecastResponse.data;
+    res.render('forecast', { forecast: forecastData });
+  } catch (error) {
+    console.log(
+      'Error fetching forecast data:',
+      error.response ? error.response.data : error.message
+    );
+    res.status(500).send('Error retrieving forecast data');
   }
 });
 

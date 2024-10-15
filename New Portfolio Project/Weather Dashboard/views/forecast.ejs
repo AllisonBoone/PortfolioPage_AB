@@ -1,0 +1,16 @@
+<%- include('../partials/head.ejs') %>
+  <body>
+    <div class="container">
+        <h1>5-Day Weather Forecast for <%= forecast.city.name %> </h1>
+        <% forecast.list.forEach(function(item){ %>
+            <p>Date/Time: <%= item.dt_txt %> </p>
+            <p>Temperature: <%= (item.main.temp - 273.15).toFixed(2) %>°C </p>
+            <p>Weather: <%= item.weather[0].description %> </p>
+            <p>Humidity: <%= item.main.humidity %> </p>
+      <%  }) %>
+        <form action="/" method="get">
+            <button type="submit">Another Forecast</button>
+          </form>
+    </div>
+  </body>
+</html>
