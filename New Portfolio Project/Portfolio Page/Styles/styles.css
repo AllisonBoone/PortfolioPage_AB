@@ -249,7 +249,7 @@ textarea {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 15px;
+  gap: 20px;
 }
 
 .grid-item {
@@ -259,7 +259,8 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   padding: 10px;
   border-radius: 8px;
   transition: transform 0.3s ease;
